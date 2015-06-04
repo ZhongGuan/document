@@ -1,0 +1,30 @@
+rm -rf .git  git init   重新创建git 库
+
+git add                           	将一个未暂存(un stage)的文件变成暂存(stage)状态
+
+git rm —cached				将一个暂存(stage)的文件变成未暂存(un stage)状态
+git reset HEAD
+
+git commit				将一个暂存(stage)的文件提交。 或者将Stage里所有的文件提交
+
+git checkout				将一个未暂存(un stage)的文件的修改取消(用此文件的上一个提交版本替换)
+
+git reflog  				查询提交历史信息
+
+git reset --hard HEAD@{1}		撤销上一次的commit操作。但上一次的commit操作任然在履历中，可以恢复。
+					上一次的修改的文件不在工作目录中保留
+                                        注意Head@{1}的写法根据reflog里的内容来。
+
+git reset (—soft) HEAD@{1}		撤销上一次的commit操作。但上一次的commit操作任然在履历中，可以恢复。
+					上一次的修改的文件在工作目录中保留
+                                        注意Head@{1}的写法根据reflog里的内容来。		
+
+
+
+
+git diff				修改后的文件和以提交的文件的差分
+
+
+
+
+git status 检查当前git的库的状态
